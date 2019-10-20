@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c
+stdio.h
+-
+stdlib.h
+-
+assert.h
+-
+
