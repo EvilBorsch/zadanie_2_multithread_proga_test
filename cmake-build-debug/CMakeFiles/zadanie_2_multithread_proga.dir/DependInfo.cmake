@@ -6,7 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c" "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/cmake-build-debug/CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o"
   )
-set(CMAKE_C_COMPILER_ID "AppleClang")
+set(CMAKE_C_COMPILER_ID "Clang")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH

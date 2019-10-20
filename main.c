@@ -13,8 +13,8 @@ typedef struct{
 digit int_to_digit(int chis){
     digit temp;
 
-    temp.bitdig1=((chis/2)%2);
-    temp.bitdig2=(chis%2);
+    temp.bitdig1 = (char) ((chis / 2) % 2);
+    temp.bitdig2 = (char) (chis % 2);
     return temp;
 }
 
@@ -98,8 +98,8 @@ int get_sigma_diagonal(digit** mat,int n){
 
 void test() {
     {
-        int temp_size = 100;
-        digit **mat = init_with_num(temp_size);
+        int n = 100;
+        digit **mat = init_with_num(n);
         size_t k = 0;
         for (size_t i = 0; i < n; i++) {
             for (size_t j = 0; j <= k; j++) {
@@ -107,7 +107,7 @@ void test() {
             }
             k++;
         }
-        del_mat(mat, temp_size);
+        del_mat(mat, n);
         printf("%s\n", "OK");
     }
 
