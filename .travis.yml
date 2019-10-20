@@ -31,11 +31,12 @@ matrix:
 script:
     # скрипт сборки и тестирования проекта:
     - ls
-    - gcc -c ./source/*.c
+    - gcc -std=c11 -c ./source/*.c
     - ar r libstatic.a *.o
     - rm *.o
+    - ls
     - gcc -std=c11 -c *.c
-    - gcc -o zadanie_2_multithread_proga *.o -L./ -lstatic
+    - gcc -o zadanie_2_multithread_proga *.o -L. -lstatic
     - ./zadanie_2_multithread_proga
     - valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./zadanie_2_multithread_proga
     - cppcheck --enable=warning,performance,information,style *.c *.h
