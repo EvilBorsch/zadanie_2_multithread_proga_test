@@ -6,12 +6,14 @@
 
 #IncludeRegexTransform: 
 
-/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c
-stdlib.h
--
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c
 stdio.h
 -
-static_lib.h
+stdlib.h
+-
+assert.h
+-
+../static_lib.h
 /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/static_lib.h
 
 /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/static_lib.h

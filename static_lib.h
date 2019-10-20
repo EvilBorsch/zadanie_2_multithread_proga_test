@@ -18,7 +18,7 @@ digit int_to_digit(int chis);
 
 digit **init_matrix_from_keyboard(size_t n);
 
-digit **init_with_num(size_t n);
+digit **init_with_num(size_t n, int num);
 
 void print_mat(digit **mat, size_t n);
 

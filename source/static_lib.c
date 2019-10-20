@@ -33,10 +33,8 @@ digit **init_matrix_from_keyboard(size_t n) {
 }
 
 
-digit **init_with_num(size_t n) {
-    digit t;
-    t.bitdig1 = 1;
-    t.bitdig2 = 0;
+digit **init_with_num(size_t n, int num) {
+    digit t = int_to_digit(num);
 
     digit **mat = (digit **) malloc(n * sizeof(digit *));
     assert(mat != NULL);
@@ -88,23 +86,5 @@ int get_sigma_diagonal(digit **mat, size_t n) {
     return sigma;
 }
 
-
-void test() {
-    {
-        int n = 100;
-        digit **mat = init_with_num(n);
-        size_t k = 0;
-        for (size_t i = 0; i < n; i++) {
-            for (size_t j = 0; j <= k; j++) {
-                assert(2 == digit_to_int(mat[i][j]));
-            }
-            k++;
-        }
-        del_mat(mat, n);
-        printf("%s\n", "OK");
-    }
-
-
-}
 
 
