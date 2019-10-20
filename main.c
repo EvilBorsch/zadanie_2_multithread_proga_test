@@ -3,54 +3,52 @@
 #include <assert.h>
 
 typedef struct{
-    int bitdig1:1;
-    int bitdig2:1;
+    char bitdig1:1;
+    char bitdig2:1;
 }digit;
 
 
-void print_digit(const digit* d){
-    printf("%d\n",d->bitdig1);
-    printf("%d\n",d->bitdig2);
+
+digit int_to_digit(int chis){
+    digit temp;
+
+    temp.bitdig1=((chis/2)%2);
+    temp.bitdig2=(chis%2);
+    return temp;
 }
 
+digit** init_matrix_from_keyboard(int n){
 
-long int get_number_of_elements(int n){
-    long long int size=n*n;
-    int t=n-1;
-    while (t!=0){
-        size-=t;
-        t--;
-    }
-    return size;
-}
-
-
-int** init_matrix_from_keyboard(int n){
-    if (n==0) n=3; //Для тестов
-    int m=n;
-    int** mat=(int**)malloc(sizeof(int)*n);
-    int k=0;
-    for (int i=0;i<3;i++){
-        mat[i]=malloc(sizeof(int)*(m-k));
-        for (int j=0;j<=k;j++){
-            printf("a[%d][%d] = ", i, j);
-            scanf("%d", &mat[i][j]);
-        }
-        k++;
-    }
-    return mat;
-}
-
-int** init_with_num(long int n){
-    if (n==0) n=3; //Для тестов
-    int** mat=(int**)malloc(n*sizeof(int*));
+    digit** mat=(digit**)malloc(n*sizeof(digit*));
     assert(mat!=NULL);
-    long int k=0;
-    for (long int i=0;i<n;i++){
-        mat[i]=(int*)malloc(sizeof(int)*(k+1));
+    size_t k=0;
+
+    for (size_t i=0;i<n;i++){
+        mat[i]=(digit*)malloc(sizeof(digit)*(k+1));
         assert(mat[i]!=NULL);
-        for (long int j=0;j<=k;j++){
-            mat[i][j]=i+j;
+        for (size_t j=0;j<=k;j++){
+            int chis;
+            scanf("%d",&chis);
+            mat[i][j]=int_to_digit(chis);
+        }
+        k++;
+    }
+    return mat;
+}
+
+digit** init_with_num(size_t n){
+    digit t;
+    t.bitdig1=1;
+    t.bitdig2=0;
+
+    digit** mat=(digit**)malloc(n*sizeof(digit*));
+    assert(mat!=NULL);
+    size_t k=0;
+    for (size_t i=0;i<n;i++){
+        mat[i]=(digit*)malloc(sizeof(digit)*(k+1));
+        assert(mat[i]!=NULL);
+        for (size_t j=0;j<=k;j++){
+            mat[i][j]=t;
         }
         k++;
     }
@@ -58,26 +56,42 @@ int** init_with_num(long int n){
 }
 
 
-void print_mat(int**mat,long int n){
-    if (n==0) n=3; //Для тестов
-    int k=0;
-    for (long int i=0;i<n;i++){
-        for (long int j=0;j<=k;j++){
-            printf("%d  ",mat[i][j]);
+void print_mat(digit**mat,size_t n){
+    size_t k=0;
+    for (size_t i=0;i<n;i++){
+        for (size_t j=0;j<=k;j++){
+            printf("%d ",digit_to_int(mat[i][j]));
         }
         printf("\n");
         k++;
     }
-
 }
 
-void del_mat(int ** mat,long int n){
+
+int digit_to_int(digit d){
+    return abs(d.bitdig1)*2+abs(d.bitdig2);
+}
+
+
+
+
+
+void del_mat(digit ** mat,int n){
     if (n==0) n=3; //Для тестов
 
-    for (long int i=0;i<n;i++){
+    for (int i=0;i<n;i++){
         free(mat[i]);
     }
     free(mat);
+}
+
+
+int get_sigma_diagonal(digit** mat,int n){
+    size_t sigma=0;
+    for (size_t i=0;i<n;i++){
+        sigma+=digit_to_int(mat[i][i]);
+    }
+    return sigma;
 }
 
 
@@ -86,12 +100,13 @@ void del_mat(int ** mat,long int n){
 
 
 int main() {
+    int temp_size=100;
 
-    long int size=5000050000;
-    long int temp_size=3;
-    int **mat=init_with_num(temp_size);
+
+    digit **mat=init_with_num(temp_size);
     print_mat(mat,temp_size);
     del_mat(mat,temp_size);
+
 
 
     return 0;
