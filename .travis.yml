@@ -30,7 +30,7 @@ matrix:
 
 script:
     # скрипт сборки и тестирования проекта:
-    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gcc -c *.c ; fi
+    - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gcc -std=c99 -c *.c ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then gcc -o zadanie_2_multithread_proga *.o -L. -lstatic ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; ./zadanie_2_multithread_proga ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./main ; fi
