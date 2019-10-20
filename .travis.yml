@@ -31,6 +31,9 @@ matrix:
 script:
     # скрипт сборки и тестирования проекта:
     - ls
+    - gcc -c ./source/*.c
+    - ar r libstatic.a *.o
+    - rm *.o
     - gcc -std=c11 -c *.c
     - gcc -o zadanie_2_multithread_proga *.o -L./ -lstatic
     - ./zadanie_2_multithread_proga
