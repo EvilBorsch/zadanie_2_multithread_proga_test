@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "static_lib.h"
+#include "libstatic.h"
 #include <assert.h>
 
 

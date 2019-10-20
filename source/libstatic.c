@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
-#include "../static_lib.h"
+#include "../libstatic.h"
 
 
 digit int_to_digit(int chis) {

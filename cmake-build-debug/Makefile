@@ -150,32 +150,32 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/main.c.s
 .PHONY : main.c.s
 
-source/static_lib.o: source/static_lib.c.o
+source/libstatic.o: source/libstatic.c.o
 
-.PHONY : source/static_lib.o
+.PHONY : source/libstatic.o
 
 # target to build an object file
-source/static_lib.c.o:
-	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o
-.PHONY : source/static_lib.c.o
+source/libstatic.c.o:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o
+.PHONY : source/libstatic.c.o
 
-source/static_lib.i: source/static_lib.c.i
+source/libstatic.i: source/libstatic.c.i
 
-.PHONY : source/static_lib.i
+.PHONY : source/libstatic.i
 
 # target to preprocess a source file
-source/static_lib.c.i:
-	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.i
-.PHONY : source/static_lib.c.i
+source/libstatic.c.i:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.i
+.PHONY : source/libstatic.c.i
 
-source/static_lib.s: source/static_lib.c.s
+source/libstatic.s: source/libstatic.c.s
 
-.PHONY : source/static_lib.s
+.PHONY : source/libstatic.s
 
 # target to generate assembly for a file
-source/static_lib.c.s:
-	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.s
-.PHONY : source/static_lib.c.s
+source/libstatic.c.s:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.s
+.PHONY : source/libstatic.c.s
 
 # Help Target
 help:
@@ -189,9 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... source/static_lib.o"
-	@echo "... source/static_lib.i"
-	@echo "... source/static_lib.s"
+	@echo "... source/libstatic.o"
+	@echo "... source/libstatic.i"
+	@echo "... source/libstatic.s"
 .PHONY : help
 
 

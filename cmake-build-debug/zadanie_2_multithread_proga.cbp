@@ -78,13 +78,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/libstatic.h">
+			<Option target="zadanie_2_multithread_proga"/>
+		</Unit>
 		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c">
 			<Option target="zadanie_2_multithread_proga"/>
 		</Unit>
-		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c">
-			<Option target="zadanie_2_multithread_proga"/>
-		</Unit>
-		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/static_lib.h">
+		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/libstatic.c">
 			<Option target="zadanie_2_multithread_proga"/>
 		</Unit>
 		<Unit filename="/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/CMakeLists.txt">

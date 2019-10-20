@@ -57,18 +57,18 @@ include CMakeFiles/zadanie_2_multithread_proga.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/zadanie_2_multithread_proga.dir/flags.make
 
-CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o: CMakeFiles/zadanie_2_multithread_proga.dir/flags.make
-CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o: ../source/static_lib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o   -c /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c
+CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o: CMakeFiles/zadanie_2_multithread_proga.dir/flags.make
+CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o: ../source/libstatic.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o   -c /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/libstatic.c
 
-CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c > CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.i
+CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/libstatic.c > CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.i
 
-CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c -o CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.s
+CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/libstatic.c -o CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.s
 
 CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o: CMakeFiles/zadanie_2_multithread_proga.dir/flags.make
 CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o: ../main.c
@@ -85,13 +85,13 @@ CMakeFiles/zadanie_2_multithread_proga.dir/main.c.s: cmake_force
 
 # Object files for target zadanie_2_multithread_proga
 zadanie_2_multithread_proga_OBJECTS = \
-"CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o" \
+"CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o" \
 "CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o"
 
 # External object files for target zadanie_2_multithread_proga
 zadanie_2_multithread_proga_EXTERNAL_OBJECTS =
 
-zadanie_2_multithread_proga: CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o
+zadanie_2_multithread_proga: CMakeFiles/zadanie_2_multithread_proga.dir/source/libstatic.c.o
 zadanie_2_multithread_proga: CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o
 zadanie_2_multithread_proga: CMakeFiles/zadanie_2_multithread_proga.dir/build.make
 zadanie_2_multithread_proga: CMakeFiles/zadanie_2_multithread_proga.dir/link.txt
