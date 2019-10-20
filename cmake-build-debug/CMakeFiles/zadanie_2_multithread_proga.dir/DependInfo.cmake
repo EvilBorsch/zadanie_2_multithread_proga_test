@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c" "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/cmake-build-debug/CMakeFiles/zadanie_2_multithread_proga.dir/main.c.o"
+  "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/static_lib.c" "/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/cmake-build-debug/CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o"
   )
 set(CMAKE_C_COMPILER_ID "Clang")
 

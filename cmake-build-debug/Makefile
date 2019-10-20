@@ -150,6 +150,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/main.c.s
 .PHONY : main.c.s
 
+source/static_lib.o: source/static_lib.c.o
+
+.PHONY : source/static_lib.o
+
+# target to build an object file
+source/static_lib.c.o:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.o
+.PHONY : source/static_lib.c.o
+
+source/static_lib.i: source/static_lib.c.i
+
+.PHONY : source/static_lib.i
+
+# target to preprocess a source file
+source/static_lib.c.i:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.i
+.PHONY : source/static_lib.c.i
+
+source/static_lib.s: source/static_lib.c.s
+
+.PHONY : source/static_lib.s
+
+# target to generate assembly for a file
+source/static_lib.c.s:
+	$(MAKE) -f CMakeFiles/zadanie_2_multithread_proga.dir/build.make CMakeFiles/zadanie_2_multithread_proga.dir/source/static_lib.c.s
+.PHONY : source/static_lib.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... source/static_lib.o"
+	@echo "... source/static_lib.i"
+	@echo "... source/static_lib.s"
 .PHONY : help
 
 

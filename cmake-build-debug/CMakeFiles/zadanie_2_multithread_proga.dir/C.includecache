@@ -7,10 +7,12 @@
 #IncludeRegexTransform: 
 
 /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c
-stdio.h
--
 stdlib.h
 -
-assert.h
+stdio.h
 -
+static_lib.h
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/static_lib.h
+
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/static_lib.h
 
