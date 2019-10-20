@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 
+
 typedef struct{
     char bitdig1:1;
     char bitdig2:1;
@@ -95,19 +96,26 @@ int get_sigma_diagonal(digit** mat,int n){
 }
 
 
+void test() {
+    {
+        int temp_size = 100;
+        digit **mat = init_with_num(temp_size);
+        size_t k = 0;
+        for (size_t i = 0; i < n; i++) {
+            for (size_t j = 0; j <= k; j++) {
+                assert(2 == digit_to_int(mat[i][j]));
+            }
+            k++;
+        }
+        del_mat(mat, temp_size);
+        printf("%s\n", "OK");
+    }
 
 
+}
 
 
 int main() {
-    int temp_size=100;
-
-
-    digit **mat=init_with_num(temp_size);
-    print_mat(mat,temp_size);
-    del_mat(mat,temp_size);
-
-
-
+    test();
     return 0;
 }
