@@ -60,6 +60,8 @@ long int find_sigma_diagonals(char **matrix1, int N) {
 
     for (int i = 0; i < NUM_THREADS; i++) pthread_join(threads[i], NULL);
     for (int i = 0; i < NUM_THREADS; i++) pthread_cancel(threads[i]);
+    free(threads);
+    free(threadData);
     long int temp = result + matrix1[0][0];
     result = 0;
     return temp;

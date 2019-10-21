@@ -66,7 +66,7 @@ void test() {
 
     {
 
-        int n = 100;
+        int n = 300;
         char **mat = init_with_num(n, 1);
 
         assert(get_sigma_diagonal(mat, n) == find_sigma_diagonals(mat, n));
@@ -79,7 +79,7 @@ void test() {
     {
         int n = 30000;
         char **mat = init_with_num(n, 1);
-        assert(get_sigma_diagonal(mat, n) > 1);
+        assert(find_sigma_diagonals(mat, n) > 1);
         del_mat(mat, n);
         printf("%s\n", "OK");
 
