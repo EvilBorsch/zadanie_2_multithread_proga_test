@@ -36,7 +36,7 @@ script:
     - rm *.o
     - ls
     - gcc -std=c11 -c *.c
-    - gcc -o zadanie_2_multithread_proga *.o -L. -lstatic
+    - gcc -o zadanie_2_multithread_proga *.o -L. -lstatic -lpthread
     - ./zadanie_2_multithread_proga
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then valgrind --error-exitcode=1 --leak-check=full --show-leak-kinds=all ./zadanie_2_multithread_proga ; fi
     - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then cppcheck --error-exitcode=1 --enable=warning,performance,information,style *.c *.h ; fi
