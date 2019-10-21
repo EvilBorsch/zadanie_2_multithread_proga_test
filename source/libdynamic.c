@@ -44,7 +44,7 @@ long int find_sigma_diagonals(char **matrix1, int N) {
     assert(threadData != NULL);
     int prev_start = 0;
 
-    for (int i = 1; i < NUM_THREADS; i++) {
+    for (int i = 0; i < NUM_THREADS - 1; i++) {
         threadData[i].rowSize = i;
         threadData[i].start_str = prev_start;
         threadData[i].matrix = matrix1;
@@ -52,15 +52,15 @@ long int find_sigma_diagonals(char **matrix1, int N) {
         prev_start += N / NUM_THREADS;
         pthread_create(&(threads[i]), NULL, threadFunc, &threadData[i]);
     }
-    threadData[NUM_THREADS].rowSize = NUM_THREADS;
-    threadData[NUM_THREADS].start_str = prev_start;
-    threadData[NUM_THREADS].num_of_strs = N - prev_start;
-    threadData[NUM_THREADS].matrix = matrix1;
-    pthread_create(&(threads[NUM_THREADS]), NULL, threadFunc, &threadData[NUM_THREADS]);
+    threadData[NUM_THREADS - 1].rowSize = NUM_THREADS;
+    threadData[NUM_THREADS - 1].start_str = prev_start;
+    threadData[NUM_THREADS - 1].num_of_strs = N - prev_start;
+    threadData[NUM_THREADS - 1].matrix = matrix1;
+    pthread_create(&(threads[NUM_THREADS - 1]), NULL, threadFunc, &threadData[NUM_THREADS - 1]);
 
     for (int i = 0; i < NUM_THREADS; i++) pthread_join(threads[i], NULL);
     for (int i = 0; i < NUM_THREADS; i++) pthread_cancel(threads[i]);
-    long int temp = result;
+    long int temp = result + matrix1[0][0];
     result = 0;
     return temp;
 

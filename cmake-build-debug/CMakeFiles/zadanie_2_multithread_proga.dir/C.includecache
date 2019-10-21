@@ -10,17 +10,13 @@
 
 /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/libstatic.h
 
-/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/source/libdynamic.c
-../libdynamic.h
-/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/libdynamic.h
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/main.c
 stdio.h
 -
-../libstatic.h
+libstatic.h
 /Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/libstatic.h
 assert.h
 -
-pthread.h
--
-stdlib.h
--
+libdynamic.h
+/Users/dmitrijgulacenkov/CLionProjects/zadanie_2_multithread_proga/libdynamic.h
 
