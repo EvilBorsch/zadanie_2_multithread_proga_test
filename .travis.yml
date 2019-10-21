@@ -36,7 +36,7 @@ script:
     - rm *.o
     - ls
     - gcc -c -fPIC source/*.c
-    - gcc -shared -o libdynamic.so *.o
+    - gcc -std=c11 -shared -o libdynamic.so *.o
     - rm *.o
     - gcc -o zadanie_2_multithread_proga *.o -L. -ldynamic -lstatic -lpthread -Wl,-rpath,.
     - ./zadanie_2_multithread_proga
